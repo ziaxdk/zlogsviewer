@@ -1,24 +1,24 @@
-# Logz-ziax
+# zlogsviwer
 
 ## Install
 
 ````
-yarn
+yarn        # Install infrastucture
 cd app
-yarn
+yarn        # Install deps for app
 ````
 
 ## Run
 
 ````
-npm start
+npm start   # Run the app
 ````
 
 ## Build
 
-
 ````
-npm run build
+npm run build       # Pack app as asar
+npm run buildinst   # Build installer
 ````
 
 __Works on my machine__
