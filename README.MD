@@ -1,9 +1,16 @@
 # Logz-ziax
 
+## Install
+
+````
+yarn
+cd app
+yarn
+````
+
 ## Run
 
 ````
-cd app
 npm start
 ````
 
@@ -11,7 +18,6 @@ npm start
 
 
 ````
-cd app
 npm run build
 ````
 

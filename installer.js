@@ -1,10 +1,10 @@
 const electronInstaller = require('electron-winstaller');
 resultPromise = electronInstaller.createWindowsInstaller({
-    appDirectory: './build/logzziax-win32-x64/',
+    appDirectory: './build/zlogsviwer-win32-x64/',
     outputDirectory: './build/installer/',
-    description: 'Real time log viewer',
+    description: 'Real time UDP log viewer',
     authors: 'ziaxdk',
-    exe: 'logzziax.exe'
+    exe: 'zlogsviwer.exe'
   });
 
 resultPromise.then(() => console.log("It worked!"), (e) => console.log(`No dice: ${e.message}`));

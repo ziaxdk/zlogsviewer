@@ -10,7 +10,7 @@ module.exports = {
 
   view: function(ctrl, args) {
     return m('header', { class: "toolbar toolbar-header" },
-    	m('h1', { class: "title" }, `logz-ziax v${ctrl.version}`)
+    	m('h1', { class: "title" }, `zlogsviwer v${ctrl.version}`)
     );
   }
 };

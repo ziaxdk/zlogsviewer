@@ -1,17 +1,17 @@
 {
-  "name": "infra",
-  "version": "1.0.0",
-  "description": "real time log viewer",
+  "name": "zlogsviewerinfra",
+  "version": "0.0.3",
+  "description": "real time UDP log viewer",
   "main": "index.js",
   "scripts": {
-    "build": "node_modules\\.bin\\electron-packager app logzziax --platform=win32 --asar --out=./build/",
+    "build": "node_modules\\.bin\\electron-packager app zlogsviwer --platform=win32 --asar --out=./build/",
     "buildinst": "node installer.js",
     "start": "node_modules\\.bin\\electron app"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "homepage": "https://github.com/ziaxdk/logz-ziax#readme",
+  "license": "MIT",
+  "homepage": "https://github.com/ziaxdk/zlogsviewer",
   "devDependencies": {
     "electron": "^1.4.6",
     "electron-packager": "^8.2.0",
