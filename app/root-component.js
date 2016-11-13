@@ -25,7 +25,7 @@ module.exports = {
 
   view: function(ctrl, args) {
     return m("div.window", [
-      m(HeaderComponent),
+      // m(HeaderComponent),
       m(TabsComponent, ctrl),
       m(ContentComponent, ctrl),
       m(FooterComponent, ctrl)
