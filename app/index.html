@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="./photon-0.1.2-dist/css/photon.css">
+  <style type="text/css">
+    ._list-group-item-clear {
+      padding: 0px 2px;
+    }
+  </style>
+  <script type="text/javascript" src="./node_modules/mithril/mithril.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    {
+      const remote = require('electron').remote;
+      const argv = remote.getGlobal('sharedObject').argv.splice(2);
+      require('./runtime')(argv);
+    }
+
+  </script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
+
+
+
+
