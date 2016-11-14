@@ -29,7 +29,15 @@ class ViewModel {
     if(!this.tabs.some(v => v.active)) {
       this.select(this.tabs[this.tabs.length - 1]);
     }
+  }
 
+  new(port) {
+    if (!this.isPort(port) || this.tabs.some(v => v.port === port)) return;
+    this.tabs.push(new Tab(port));
+  }
+
+  isPort(port) {
+    return (/^\d{1,5}$/.test(port) && port >= 1 && port <= 65535);
   }
 	
   destroy() {

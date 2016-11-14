@@ -23,12 +23,12 @@ module.exports = {
     return vm;
   },
 
-  view: function(ctrl, args) {
+  view: function(vm) {
     return m("div.window", [
       // m(HeaderComponent),
-      m(TabsComponent, ctrl),
-      m(ContentComponent, ctrl),
-      m(FooterComponent, ctrl)
+      m(TabsComponent, vm),
+      m(ContentComponent, vm),
+      m(FooterComponent, vm)
     ]);
   }
 };

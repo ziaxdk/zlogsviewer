@@ -3,6 +3,9 @@ const TabComponent = require('./tab-component');
 
 module.exports = {
   controller: function(args) {
+    this.newClick = () => {
+      args.new(9000);
+    }
   },
 
   view: function(ctrl, args) {
@@ -10,8 +13,9 @@ module.exports = {
       args.tabs.map(tab => {
         return m(TabComponent, { tab, vm: args });
       }),
-      m('div', { class: "tab-item tab-item-fixed" },
-        m('span', { class: "icon icon-plus" })
+        m('a', { onclick: ctrl.newClick },
+          m('div', { class: "tab-item tab-item-fixed" },
+            m('span', { class: "icon icon-plus" }))
     )
   );
   }
