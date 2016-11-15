@@ -9,6 +9,12 @@ class ViewModel {
 	}
 
   select(tab) {
+    if (tab.active) {
+      tab.pause();
+      return;
+    }
+
+
     this.tabs.forEach(t => {
       if (t === tab) {
         t.active = true;

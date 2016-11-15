@@ -21,13 +21,13 @@ class Tab {
 	      // console.log('..', s);
 	      if (this.totalCount !=0) {
 		      this.newEntry = true;
-		  }
+			  }
 	      if (this.active) {
 		      m.redraw();
-		  }
-		  else {
-		  }
-		  this.totalCount++;
+			  }
+			  else {
+			  }
+			  this.totalCount++;
 	    });
 
 		this.log = log;

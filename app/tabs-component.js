@@ -2,13 +2,13 @@ const m = require('mithril');
 const TabComponent = require('./tab-component');
 
 module.exports = {
-  controller: function(args) {
+  controller(args) {
     this.newClick = () => {
       args.new(9000);
     }
   },
 
-  view: function(ctrl, args) {
+  view(ctrl, args) {
     return m('div.tab-group',
       args.tabs.map(tab => {
         return m(TabComponent, { tab, vm: args });

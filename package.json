@@ -1,10 +1,10 @@
 {
   "name": "zlogsviewerinfra",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "real time UDP log viewer",
   "main": "index.js",
   "scripts": {
-    "build": "node_modules\\.bin\\electron-packager app zlogsviwer --platform=win32 --asar --out=./build/",
+    "build": "node_modules\\.bin\\electron-packager app zlogsviwer --platform=win32 --asar --out=./build/ --overwrite",
     "buildinst": "node installer.js",
     "start": "node_modules\\.bin\\electron app"
   },
