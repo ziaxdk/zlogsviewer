@@ -9,8 +9,10 @@ class Tab {
 		this.active = false;
 		this.newEntry = false;
 		this.totalCount = 0;
+		this.isPaused = false;
 		let log = new LogReceiver({ port: port });
 	    log.on('data', s => {
+	    	if (this.isPaused) return;
 	    	this.buffer.unshift(s);
 
 	      if (this.buffer.length >= 256) {
@@ -38,6 +40,10 @@ class Tab {
 
 	destroy() {
 		this.log.destroy();
+	}
+
+	pause() {
+		this.isPaused = !this.isPaused;
 	}
 	
 }
