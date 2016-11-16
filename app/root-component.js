@@ -10,17 +10,7 @@ const runtime = require('./runtime');
 module.exports = {
 
   controller: function(args) {
-    var check = [], argv = runtime.args || [];
-  
-    argv.forEach(v => {
-      if (Number.isSafeInteger(v)) {
-        check.push(parseInt(v));
-      }
-    });
-  
-    if (check.length === 0) check.push(8080);
-    var vm = new ViewModel(check);
-    return vm;
+    return new ViewModel(runtime.args);
   },
 
   view: function(vm) {

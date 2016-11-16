@@ -1,5 +1,6 @@
 const uniq = require('lodash.uniq');
 const Tab = require('./Tab');
+const utils = require('./utils');
 
 class ViewModel {
 	constructor(ports) {
@@ -43,7 +44,7 @@ class ViewModel {
   }
 
   isPort(port) {
-    return (/^\d{1,5}$/.test(port) && port >= 1 && port <= 65535);
+    return utils.isPort(port);
   }
 	
   destroy() {

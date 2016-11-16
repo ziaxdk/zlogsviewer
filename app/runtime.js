@@ -1,10 +1,12 @@
+const utils = require('./utils');
+const json = require('./package.json');
+
 module.exports = function(args) {
 
   var check = [], argv = [];
-  var digits = /^\d{1,5}$/
 
   args.forEach(v => {
-    if (digits.test(v)) {
+    if (utils.isPort(v)) {
       check.push(parseInt(v));
     }
   });
@@ -13,6 +15,6 @@ module.exports = function(args) {
 
   module.exports = {
     args: check,
-    _v: '0.0.2'
+    _v: json.version
   }
 }
