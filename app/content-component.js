@@ -5,6 +5,12 @@ module.exports = {
   },
 
   view: function(ctrl, args) {
+    function marking(doMarking, input) {
+      if (!doMarking) return input;
+      return m.trust(input.replace('\n', '<br/>').replace(' ', '&nbsp;'));
+    }
+
+
   	var regex = /^ ?(DEBUG|INFO|WARNING|ERROR|FATAL)/;
   	function mangle(val) {
   		var valv = m('span', val);
@@ -29,7 +35,7 @@ module.exports = {
   			color = '#fc605b';
   		}
   		var dotv = m('span', { class: "icon icon-record", style: { 'color': color } });
-  		valv = m('span', match.input.replace(match[0], ''));
+  		valv = m('span', marking(false, match.input.replace(match[0], '')));
   		return [ dotv, valv ];
   	}
 
