@@ -1,5 +1,5 @@
-// const LogReceiver = require('./dummy-log-receiver');
-const LogReceiver = require('./log-receiver');
+const LogReceiver = require('./dummy-log-receiver');
+// const LogReceiver = require('./log-receiver');
 const m = require('mithril');
 
 class Tab {
@@ -13,7 +13,7 @@ class Tab {
 		let log = new LogReceiver({ port: port });
 	    log.on('data', s => {
 	    	if (this.isPaused) return;
-	    	this.buffer.unshift(s);
+	    	this.buffer.unshift({ id: this.totalCount, data: s });
 
 	      if (this.buffer.length >= 256) {
 	        this.buffer.pop();

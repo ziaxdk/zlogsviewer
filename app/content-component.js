@@ -42,7 +42,7 @@ module.exports = {
     return m("div.window-content",
     	m('ul.list-group',
 	    	args.content.map(ctn => {
-	    		return m('li.list-group-item', { class: '_list-group-item-clear' }, mangle(ctn));
+	    		return m('li.list-group-item', { key: ctn.id, class: '_list-group-item-clear' }, mangle(ctn.data));
 	    	})
     	)
 	);

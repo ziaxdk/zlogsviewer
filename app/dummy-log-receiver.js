@@ -18,7 +18,7 @@ class Log extends EventEmitter {
 			var s = 'to ' + this.options.port + ' (' + (i++) + ')';
 			this.emit('data', s);
 			// console.log(s);
-		}, 300);
+		}, 30);
 		__.set(this, { id });
 
 	}
