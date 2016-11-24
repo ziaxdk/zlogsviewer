@@ -1,5 +1,5 @@
-const LogReceiver = require('./dummy-log-receiver');
-// const LogReceiver = require('./log-receiver');
+// const LogReceiver = require('./dummy-log-receiver');
+const LogReceiver = require('./log-receiver');
 const m = require('mithril');
 
 class Tab {
@@ -32,6 +32,10 @@ class Tab {
 
 		this.log = log;
 		log.listen();
+	}
+
+	clear() {
+		this.buffer.length = 0;
 	}
 
 	close() {
