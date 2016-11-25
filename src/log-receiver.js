@@ -1,6 +1,6 @@
-const EventEmitter = require('events');
-const Util = require('util');
-const dgram = require('dgram');
+import EventEmitter from 'events';
+import Util from 'util';
+import dgram from 'dgram';
 const __ = new WeakMap();
 
 class Log extends EventEmitter {

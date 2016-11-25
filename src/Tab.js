@@ -1,6 +1,6 @@
-const LogReceiver = require('./dummy-log-receiver');
-// const LogReceiver = require('./log-receiver');
-const m = require('mithril');
+import LogReceiver from './dummy-log-receiver';
+// import LogReceiver from './log-receiver';
+import m from 'mithril';
 
 class Tab {
 	constructor(port) {

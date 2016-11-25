@@ -1,5 +1,5 @@
-const m = require('mithril');
-const TabComponent = require('./tab-component');
+import m from 'mithril';
+import TabComponent from './tab-component';
 
 module.exports = {
   controller(args) {

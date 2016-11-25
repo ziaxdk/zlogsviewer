@@ -1,11 +1,11 @@
-const m = require('mithril');
-const HeaderComponent = require ('./header-component');
-const ContentComponent = require ('./content-component');
-const FooterComponent = require ('./footer-component');
-const TabsComponent = require ('./tabs-component');
+import m from 'mithril';
+import HeaderComponent from './header-component';
+import ContentComponent from './content-component';
+import FooterComponent from './footer-component';
+import TabsComponent from './tabs-component';
 
-const ViewModel = require('./ViewModel');
-const runtime = require('./runtime');
+import ViewModel from './ViewModel';
+import runtime from './runtime';
 
 module.exports = {
 

@@ -1,6 +1,6 @@
-const uniq = require('lodash.uniq');
-const Tab = require('./Tab');
-const utils = require('./utils');
+import uniq from 'lodash.uniq';
+import Tab from './Tab';
+import utils from './utils';
 
 class ViewModel {
 	constructor(ports) {

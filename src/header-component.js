@@ -1,5 +1,5 @@
-const m = require('mithril');
-const json = require('./package.json');
+import m from 'mithril';
+import json from './package.json';
 
 module.exports = {
   controller: function(args) {

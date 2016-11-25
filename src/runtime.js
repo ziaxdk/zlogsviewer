@@ -1,5 +1,5 @@
-const utils = require('./utils');
-const json = require('./package.json');
+import utils from './utils';
+import json from './package.json';
 
 module.exports = function(args) {
 

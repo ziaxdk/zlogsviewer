@@ -1,5 +1,5 @@
-const m = require('mithril');
-const cn = require('classnames');
+import m from 'mithril';
+import cn from 'classnames';
 
 module.exports = {
   controller(args) {

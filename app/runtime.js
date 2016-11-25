@@ -1,7 +1,14 @@
 'use strict';
 
-var utils = require('./utils');
-var json = require('./package.json');
+var _utils = require('./utils');
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _package = require('./package.json');
+
+var _package2 = _interopRequireDefault(_package);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function (args) {
 
@@ -9,7 +16,7 @@ module.exports = function (args) {
       argv = [];
 
   args.forEach(function (v) {
-    if (utils.isPort(v)) {
+    if (_utils2.default.isPort(v)) {
       check.push(parseInt(v));
     }
   });
@@ -18,6 +25,6 @@ module.exports = function (args) {
 
   module.exports = {
     args: check,
-    _v: json.version
+    _v: _package2.default.version
   };
 };
