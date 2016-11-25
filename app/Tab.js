@@ -36,6 +36,7 @@ class Tab {
 
 	clear() {
 		this.buffer.length = 0;
+		this.totalCount = 0;
 	}
 
 	close() {
