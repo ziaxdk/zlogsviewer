@@ -1,11 +1,14 @@
-const utils = require('./utils');
-const json = require('./package.json');
+'use strict';
 
-module.exports = function(args) {
+var utils = require('./utils');
+var json = require('./package.json');
 
-  var check = [], argv = [];
+module.exports = function (args) {
 
-  args.forEach(v => {
+  var check = [],
+      argv = [];
+
+  args.forEach(function (v) {
     if (utils.isPort(v)) {
       check.push(parseInt(v));
     }
@@ -16,5 +19,5 @@ module.exports = function(args) {
   module.exports = {
     args: check,
     _v: json.version
-  }
-}
+  };
+};

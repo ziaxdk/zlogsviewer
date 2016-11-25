@@ -6,13 +6,16 @@
   "scripts": {
     "build": "node_modules\\.bin\\electron-packager app zlogsviwer --platform=win32 --asar --out=./build/ --overwrite",
     "buildinst": "node installer.js",
-    "start": "node_modules\\.bin\\electron app"
+    "start": "node_modules\\.bin\\electron app",
+    "c": "babel src -d app"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "homepage": "https://github.com/ziaxdk/zlogsviewer",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
     "electron": "^1.4.6",
     "electron-packager": "^8.2.0",
     "electron-winstaller": "^2.4.1"
