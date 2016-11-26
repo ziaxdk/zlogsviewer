@@ -12,6 +12,10 @@ var _mithril = require('mithril');
 
 var _mithril2 = _interopRequireDefault(_mithril);
 
+var _Rx = require('rxjs/Rx');
+
+var _Rx2 = _interopRequireDefault(_Rx);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44,6 +48,11 @@ var Tab = function () {
 				_mithril2.default.redraw();
 			} else {}
 			_this.totalCount++;
+		});
+
+		var clicks = _Rx2.default.Observable.fromEvent(log, 'data');
+		clicks.subscribe(function (x) {
+			return console.log(x);
 		});
 
 		this.log = log;

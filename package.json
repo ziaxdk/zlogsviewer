@@ -19,5 +19,8 @@
     "electron": "^1.4.6",
     "electron-packager": "^8.2.0",
     "electron-winstaller": "^2.4.1"
+  },
+  "dependencies": {
+    "rxjs": "^5.0.0-rc.4"
   }
 }
