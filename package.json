@@ -16,8 +16,10 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
     "electron": "^1.4.6",
     "electron-packager": "^8.2.0",
     "electron-winstaller": "^2.4.1"
-  }
+  },
+  "dependencies": {}
 }

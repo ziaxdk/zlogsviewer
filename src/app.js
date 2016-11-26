@@ -1,4 +1,7 @@
-import m from 'mithril';
-import RootComponent from './root-component';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-m.mount(document.body, RootComponent);
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
